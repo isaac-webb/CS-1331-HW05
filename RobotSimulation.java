@@ -238,7 +238,7 @@ public class RobotSimulation {
             System.out.println("0. See best dish");
             System.out.println("1. See number of meals served");
             System.out.println("2. Serve meal");
-            System.out.println("3. Meet a celebrity");
+            System.out.println("3. View the number of celebrities met");
             System.out.println();
 
             userInput = input.nextInt();
@@ -264,9 +264,10 @@ public class RobotSimulation {
                     + " served " + meal + ".");
                 System.out.println();
             } else if (userInput == 3) {
-                // ((RestaurantChefRobot) selectedRobot).meetCelebrity();
+                int celebs = ((RestaurantChefRobot) selectedRobot)
+                        .getCelebritiesMet();
                 System.out.println(selectedRobot.getName()
-                    + " met another celebrity!.");
+                    + " has met " + celebs + " celebrities!");
                 System.out.println();
             }
         } else if (selectedRobot instanceof PersonalChefRobot) {
@@ -345,7 +346,6 @@ public class RobotSimulation {
             System.out.println("What action would you like "
                 + "to perform?");
             System.out.println("0. See number of projects completed");
-            System.out.println("1. Complete more projects");
             System.out.println();
 
             userInput = input.nextInt();
@@ -357,14 +357,6 @@ public class RobotSimulation {
                     .getProjectCount();
                 System.out.println(projectCount
                     + " projects have been completed.");
-                System.out.println();
-            } else if (userInput == 1) {
-                System.out.println("How many projects would you like "
-                    + "it to complete?");
-                System.out.println();
-
-                userInput = input.nextInt();
-                input.nextLine();
                 System.out.println();
             }
         }
