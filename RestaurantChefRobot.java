@@ -12,7 +12,7 @@ public class RestaurantChefRobot extends ChefRobot {
 
     /**
       * Creates a RestaurantChefRobot with the given name, dishes, best dish,
-      * meals served, and celebritiesMet.
+      * meals served, and celebritiesMet. This is the preferred constructor.
       *
       * @param name The name of the RestaurantChefRobot
       * @param bestDish The name of the RestaurantChefRobot's best dish
@@ -32,11 +32,13 @@ public class RestaurantChefRobot extends ChefRobot {
     }
 
     /**
-      * Increments the number of celebrities the RestaurantChefRobot has met.
+      * Default, no parameter constructor. Creates a RestaurantChefRobot named
+      * &quot;Anonymous&quot; with no best dish, 0 meals served, a null menu,
+      * and 0 celebrities met.
       */
-    // public void meetCelebrity() {
-    //     celebritiesMet++;
-    // }
+    public RestaurantChefRobot() {
+        this("Anonymous", "", 0, null, 0);
+    }
 
     /**
       * Sets how many celebrities the RestaurantChefRobot has met.

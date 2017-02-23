@@ -12,7 +12,8 @@ public class PersonalChefRobot extends ChefRobot {
 
     /**
       * Creates a PersonalChefRobot with the given name, dishes, best dish,
-      * meals served, and guest hosting ability.
+      * meals served, and guest hosting ability. This is the preferred
+      * constructor.
       *
       * @param name The name of the PersonalChefRobot
       * @param bestDish The name of the PersonalChefRobot's best dish
@@ -27,6 +28,15 @@ public class PersonalChefRobot extends ChefRobot {
                              boolean hostGuests) {
         super(name, bestDish, mealsServed, menu);
         canHostGuests = hostGuests;
+    }
+
+    /**
+      * Default, no parameter constructor. Creates a PersonalChefRobot named
+      * &quot;Anonymous&quot; with no best dish, 0 meals served, a null menu,
+      * and cannot host guests.
+      */
+    public PersonalChefRobot() {
+        this("Anonymous", "", 0, null, false);
     }
 
     /**

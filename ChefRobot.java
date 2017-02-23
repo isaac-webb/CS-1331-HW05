@@ -16,7 +16,7 @@ public class ChefRobot extends Robot {
 
     /**
       * Creates a ChefRobot with the given name, dishes, best dish, and meal
-      * count.
+      * count. This is the preferred constructor.
       *
       * @param name The name of the ChefRobot
       * @param bestDish The name of the ChefRobot's best dishes
@@ -31,6 +31,15 @@ public class ChefRobot extends Robot {
         this.bestDish = bestDish;
         mealsServedCount = mealsServed >= 0 ? mealsServed : 0;
         this.menu = menu;
+    }
+
+    /**
+      * Default, no parameter constructor. Creates a ChefRobot named
+      * &quot;Anonymous&quot; with no best dish, 0 meals served, and a null
+      * menu.
+      */
+    public ChefRobot() {
+        this("Anonymous", "", 0, null);
     }
 
     /**

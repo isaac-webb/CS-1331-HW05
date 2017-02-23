@@ -11,12 +11,21 @@ public class Robot {
     private String name;
 
     /**
-      * Creates a new Robot with the given name.
+      * Creates a new Robot with the given name. This is the preferred
+      * constructor.
       *
       * @param name The name to be given to the Robot
       */
     public Robot(String name) {
         this.name = name;
+    }
+
+    /**
+      * Default, no parameter constructor. Creates a new Robot with the default
+      * name &quot;Anonymous&quot;.
+      */
+    public Robot() {
+        this("Anonymous");
     }
 
     /**

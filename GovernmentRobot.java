@@ -13,7 +13,7 @@ public class GovernmentRobot extends Robot {
 
     /**
       * Creates a GovernmentRobot with the given name, project number, and
-      * security clearance.
+      * security clearance. This is the preferred constructor.
       *
       * @param name The name of the GovernmentRobot
       * @param projects The number of projects the GovernmentRobot has completed
@@ -26,6 +26,14 @@ public class GovernmentRobot extends Robot {
         super(name);
         projectCount = projects >= 0 ? projects : 0;
         hasSecurityClearance = securityClearance;
+    }
+
+    /**
+      * Default, no parameter constructor. Creates a GovernmentRobot named
+      * &quot;Anonymous&quot; with 0 projects and no security clearance.
+      */
+    public GovernmentRobot() {
+        this("Anonymous", 0, false);
     }
 
     /**
